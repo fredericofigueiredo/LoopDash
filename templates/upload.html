@@ -17,14 +17,29 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Upload a Song</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="fileInput" name="song" required>
-            <button type="submit">Upload</button>
-        </form>
-    </div>
-    <script src="upload.js"></script>
+    <h1>Upload a Song</h1>
+    <form action="/upload_song" method="post" enctype="multipart/form-data">
+
+        <label for="song">Song File:</label>
+        <input type="file" id="song" name="song" required><br>
+
+        <label for="uploader_name">Uploader Name:</label>
+        <input type="text" id="uploader_name" name="uploader_name" required><br>
+
+        <label for="name">Song Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="bpm">BPM:</label>
+        <input type="number" id="bpm" name="bpm" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre" required><br>
+
+        <input type="submit" value="Upload">
+        <script src="upload.js"></script>
 </body>
 
 </html>
